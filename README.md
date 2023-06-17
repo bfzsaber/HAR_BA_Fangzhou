@@ -52,7 +52,8 @@ The main contribution of this work is the implementation of TinyHAR on an FPGA p
 
 ## RISKS (continuously updated)
 
->For each foreseable risk (try to name as many as possible, at least 3) causing either delays or not fulfilling parts of the plan a description should be maintained
->||Risk Description||Impact||Likelyhood||Preventive Measure||Reactive Measure||Status||
->||ill-conditioned gradient modification|| non-convergence of training || likely || hyper-parameter tuning ||N/A||N/A
->||weights are not well-similated|| bad result || likely || hyper-parameter tuning ||N/A||N/A
+For each foreseable risk (try to name as many as possible, at least 3) causing either delays or not fulfilling parts of the plan a description should be maintained
+
+| Risk Description | Impact | Likelyhood | Preventive Measure | Reactive Measure | Status |
+|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
+|limitation from CNN_FPGA Tool flows: certain layers or functions are not supported|can not generate hardware file purely based on FPGA |very likely|N/A|a.write costume functions according to the tool flow b.run unsupported parts on CPU|N/A|
