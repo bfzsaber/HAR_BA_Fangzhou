@@ -1,3 +1,7 @@
+# 12.07.23
+- original finn-hls code: [HLS 214-309] in function 'void ConvolutionInputGenerator_1D<1u, 20u, 8u, 18u, 18u, 1u, 10u, ap_resource_dflt>(hls::stream<ap_uint<(10u) * (8u)>, 0>&, hls::stream<ap_uint<(10u) * (8u)>, 0>&, unsigned int, ap_resource_dflt const&)': Detected unsupported array/vector as field with size 0 in struct object 'buffer' ([slidingwindow.h](https://github.com/Xilinx/finn-hlslib/blob/master/slidingwindow.h):1880:6)
+- problem code: constexpr unsigned  BUFFER_SIZE = (ConvKernelDim_x - 1) * SIMD_COUNT; finn conv1d and hls may expect input in shape (1,n) and kernel in shape (1, n)
+- solution: delete -1, since other ConvolutionInputGenerator_1D methods do not have it.----> need to verify!
 ## Brevitas Export:
 (  cross_channel_interaction_type = "attn",
                       cross_channel_aggregation_type = "FC",
