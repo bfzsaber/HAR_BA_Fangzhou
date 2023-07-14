@@ -30,18 +30,25 @@ The main contribution of this work is the implementation of TinyHAR on an FPGA p
 
 
 ## WORK PLAN
+## WORK PLAN
 ~~Week 1-12 corresponds to the period from June 19th to September 10th.~~
 ~~even though the registered time is from July 1st to October 30th~~
-| Task | Start Date | End Date  | Duration (Days) |
-|-----------------|-----------------|-----------------|-----------------|
-| TinyHAR Brevitas_ONNX export| | |week1|
-|(based on the limitation of FINN, designing plans and deadlines to solve the problem) plan a: Model Partition - which node? How| | |week2|
-|Model Partition - how to combine child models, how to verify, how to implement(theory)|||week 3 |
-|Model Partition - adjusting parameters according to theories and implementation|||week4
-|FPGA Board Exploration or explore other evaluation methods|||week5|
-|design approperiate metric|||week6|
-|evaluate the proposed metrics|||week 7 +8|
-|writing thesis|||week 9 10 11 12|
+| Week | Duration | Tasks  |  
+|-----------------|-----------------|-----------------|
+|~~week 01~~|~~19.06-25.06~~|-write quantized TinyHAR using Brevitas's library|
+|~~week 02~~|~~26.06-02.07~~| -collect similar articles and projects using FINN<br> -analyse their solution for implementing model that is not entirely supported by FINN<br> -list their pros and cons, probability for TinyHAR model<br> -discuss with advisor to choose a solution for TinyHAR|
+|~~week 03~~|~~03.07-09.07~~|-(Target given Zedboard: Zynq-7000 SOC)<br> -how to transfer data between MCU and FPGA|
+|week 04|10.07-16.07|**criteria**: FINN pipeline<br> -use costum partition to separate TinyHAR model according to FINN-HLS library support<br> -hardware generation for HLS supported parts|
+|week 05|17.07-23.07|-6 datasets, quantised TinyHAR vs original HAR metrics: Averaged F1M and model size<br> FPGA synthesis part, reports|
+|week 06|24.07-30.07|**criteria**:evaluation comparison<br> - CPU and MCU or GPU Latency etc. and energy efficiency|
+|week 07|31.07-06.08|for future works: combine FPGA and MCU parts on Zedboard|
+|week 08|07.08-13.08||
+|week 09|14.08-20.08|**criteria**：structure of the thesis<br> -reorganise from previous weekly report and list used literatures<br> -compare to similar works a.their structure b.FINN what is mentionable and proof their correctness|
+|week 10|21.08 - 27.08|-study for theory background a.FPGA and HAR b.mathematic parts<br> -design challenges and implementation|
+|week 11|28.08 - 03.09|**criteria**：initial draft of the thesis<br> -statistic, comparison<br> -conclusion, future works etc.<br> -combine different parts |
+|week 12|04.09-10.09|-presentation preparation|
+|week 13|11.09-19.09|**criteria**：-Thesis Defense|
+
 ## CORE TASK
 
 - Find the suitable datasets 
