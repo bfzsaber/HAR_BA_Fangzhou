@@ -10,6 +10,15 @@ average marco f1 72.91% +- 1.17%
 Computational complexity(MAC):       389440.0
 Number of parameters:           40008 
 
+
+args.model_type              = "tinyhar"
+
+args.cross_channel_interaction_type = "attn"
+args.cross_channel_aggregation_type = "FC"
+args.temporal_info_interaction_type = "lstm"
+args.temporal_info_aggregation_type = "tnaive"
+Average macro F1:6.3958594 / 9 ≈ 0.710651044
+
 TinyHAR paper:
 model size(Number of trainable parameters): 37274
 FLOP: 1466764
